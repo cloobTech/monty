@@ -32,6 +32,8 @@ void print_stack(stack_t **stack, unsigned int line_number)
 
 void print_stack_head(stack_t **stack, unsigned int line_number)
 {
+	int k = 0;
+
 	if (*stack == NULL)
 	{
 		dprintf(2, "L%u: can't pint, stack empty\n", line_number);
@@ -40,7 +42,7 @@ void print_stack_head(stack_t **stack, unsigned int line_number)
 	print_top_node(*stack);
 	if (val == 0)
 	{
-		dprintf(2, "0\n");
+		dprintf(2, "%d\n", k);
 		return;
 	}
 }
