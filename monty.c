@@ -46,8 +46,6 @@ int  main(int argc, char *argv[])
 
 		if (arg)
 			val = atoi(arg);
-		else
-			val = 0;
 		f = get_stack_call(token);
 		if (f == NULL)
 		{

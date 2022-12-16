@@ -38,4 +38,9 @@ void print_stack_head(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	print_top_node(*stack);
+	if (val == 0)
+	{
+		dprintf(2, "0\n");
+		return;
+	}
 }
