@@ -1,9 +1,11 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+extern int val;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -38,4 +40,7 @@ void (*get_stack_call(char *token))( stack_t **stack, unsigned int line_number);
 void push_stack(stack_t **stack, unsigned int line_number);
 void pop_stack(stack_t **stack, unsigned int line_number);
 void print_stack(stack_t **stack, unsigned int line_number);
+stack_t *add_dnodeint(stack_t **head, int n);
+size_t print_dlistint(const stack_t *h);
+int pop_dnodeint(stack_t **head);
 #endif /*MONTY_H*/
