@@ -50,7 +50,10 @@ int  main(int argc, char *argv[])
 			val = 0;
 		f = get_stack_call(token);
 		if (f == NULL)
-			printf("Not Found: Line %d \n", line_number);
+		{
+			dprintf(2, "L%u: unknown instruction %s\n", line_number, token);
+			exit(EXIT_FAILURE);
+		}
 		f(&stack, line_number);
 
 	}

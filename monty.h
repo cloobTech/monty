@@ -43,4 +43,6 @@ void print_stack(stack_t **stack, unsigned int line_number);
 stack_t *add_dnodeint(stack_t **head, int n);
 size_t print_dlistint(const stack_t *h);
 int pop_dnodeint(stack_t **head);
+void print_stack_head(stack_t **stack, unsigned int line_number);
+void print_top_node(const stack_t *h);
 #endif /*MONTY_H*/

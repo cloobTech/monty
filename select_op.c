@@ -7,6 +7,7 @@ void (*get_stack_call(char *token))( stack_t **stack, unsigned int line_number)
 		{"push", push_stack},
 		{"pall", print_stack},
 		{"pop", pop_stack},
+		{"pint", print_stack_head},
 		{NULL, NULL}
 	};
 
@@ -17,10 +18,6 @@ void (*get_stack_call(char *token))( stack_t **stack, unsigned int line_number)
 		i++;
 	}
 
-	if (op_code[i].opcode == NULL)
-	{
-		printf("Error\n");
-	}
 
 	return (0);
 }

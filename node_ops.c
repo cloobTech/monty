@@ -82,10 +82,16 @@ size_t print_dlistint(const stack_t *h)
 	i = 0;
 	while (current)
 	{
-		printf("%d\n", current->n);
+		dprintf(1, "%d\n", current->n);
 		i++;
 		current = current->next;
 	}
 
 	return (i);
+}
+
+
+void print_top_node(const stack_t *h)
+{
+	dprintf(1, "%d\n", h->n);
 }
