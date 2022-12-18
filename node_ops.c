@@ -73,7 +73,27 @@ int pop_dnodeint(stack_t **head)
  * Return: The number of nodes
  */
 
-size_t print_dlistint(const stack_t *h)
+void print_dlistint(const stack_t *h)
+{
+	const stack_t *current;
+
+	current = h;
+	while (current)
+	{
+		dprintf(1, "%d\n", current->n);
+		current = current->next;
+	}
+}
+
+/**
+ * len_dlistint - return the lenght of nodes
+ *
+ * @h: pointer to head node
+ *
+ * Return: lenght of nodes
+ */
+
+size_t len_dlistint(const stack_t *h)
 {
 	const stack_t *current;
 	size_t i;
@@ -82,7 +102,6 @@ size_t print_dlistint(const stack_t *h)
 	i = 0;
 	while (current)
 	{
-		dprintf(1, "%d\n", current->n);
 		i++;
 		current = current->next;
 	}
@@ -90,6 +109,11 @@ size_t print_dlistint(const stack_t *h)
 	return (i);
 }
 
+/**
+ * print_top_node - print top node
+ * 
+ * @h: head to pointer
+ */
 
 void print_top_node(const stack_t *h)
 {
